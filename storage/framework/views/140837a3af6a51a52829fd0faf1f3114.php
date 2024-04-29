@@ -28,7 +28,17 @@ foreach ($attributes->all() as $__key => $__value) {
 }
 
 unset($__defined_vars); ?>
-<div class="bg-gray-50 border border-gray-200 rounded p-6">
+
+<?php if (isset($component)) { $__componentOriginal53747ceb358d30c0105769f8471417f6 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal53747ceb358d30c0105769f8471417f6 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.card','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('card'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
     <div class="flex">
         <img class="hidden w-48 mr-6 md:block" src="<?php echo e(asset('images/no-image.png')); ?>" alt="" />
         <div>
@@ -36,25 +46,41 @@ unset($__defined_vars); ?>
                 <a href="/listings/<?php echo e($listing->id); ?>"><?php echo e($listing->title); ?></a>
             </h3>
             <div class="text-xl font-bold mb-4"><?php echo e($listing->company); ?></div>
-            <ul class="flex">
-                <li class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
-                    <a href="#">Laravel</a>
-                </li>
-                <li class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
-                    <a href="#">API</a>
-                </li>
-                <li class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
-                    <a href="#">Backend</a>
-                </li>
-                <li class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
-                    <a href="#">Vue</a>
-                </li>
-            </ul>
+            <?php if (isset($component)) { $__componentOriginald08d2da7be5ae2acd5a2941b6ebc07e9 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginald08d2da7be5ae2acd5a2941b6ebc07e9 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.listing-tag','data' => ['tagsCsv' => $listing->tags]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('listing-tag'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['tagsCsv' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($listing->tags)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginald08d2da7be5ae2acd5a2941b6ebc07e9)): ?>
+<?php $attributes = $__attributesOriginald08d2da7be5ae2acd5a2941b6ebc07e9; ?>
+<?php unset($__attributesOriginald08d2da7be5ae2acd5a2941b6ebc07e9); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginald08d2da7be5ae2acd5a2941b6ebc07e9)): ?>
+<?php $component = $__componentOriginald08d2da7be5ae2acd5a2941b6ebc07e9; ?>
+<?php unset($__componentOriginald08d2da7be5ae2acd5a2941b6ebc07e9); ?>
+<?php endif; ?>
+
             <div class="text-lg mt-4">
                 <i class="fa-solid fa-location-dot"></i> <?php echo e($listing->location); ?>
 
             </div>
         </div>
     </div>
-</div>
+ <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal53747ceb358d30c0105769f8471417f6)): ?>
+<?php $attributes = $__attributesOriginal53747ceb358d30c0105769f8471417f6; ?>
+<?php unset($__attributesOriginal53747ceb358d30c0105769f8471417f6); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal53747ceb358d30c0105769f8471417f6)): ?>
+<?php $component = $__componentOriginal53747ceb358d30c0105769f8471417f6; ?>
+<?php unset($__componentOriginal53747ceb358d30c0105769f8471417f6); ?>
+<?php endif; ?>
 <?php /**PATH /home/loww/dev/laravel11/laravel11/resources/views/components/listing-card.blade.php ENDPATH**/ ?>
