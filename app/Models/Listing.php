@@ -9,6 +9,7 @@ class Listing extends Model
 {
     use HasFactory;
     public function scopeFilter ($query , array $filters) {
+
         if ($filters['tag'] ?? false) {
             $query->where ('tags','like','%'.request('tag').'%');
         }
@@ -19,5 +20,6 @@ class Listing extends Model
             ->orWhere ('description','like','%'. request('search').'%')
             -> orWhere('tags','like','%'. request('search').'%');
         }
+
     }
 }

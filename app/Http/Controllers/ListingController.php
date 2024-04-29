@@ -17,7 +17,6 @@ class ListingController extends Controller
             ->filter(request(['tag','search']))
             ->get()
         ]);
-
     }
 
     //to show single listing
@@ -34,14 +33,13 @@ class ListingController extends Controller
         else {
             abort('404');
         }
-
+    }
+    public function create () {
+        return view('listings.create');
     }
 
-    //to show single listing
-    // public function show(Listing $listing) {
-    //     return view('listing', [
-    //                 'listing'=> $listing
-    //             ]);
-    // }
+    public function store (Request $request) {
+        // dd($request->all());
+    }
 
 }
