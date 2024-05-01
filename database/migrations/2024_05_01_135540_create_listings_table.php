@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('website');
             $table->longText('description');
-            $table->string('PhoneNumber');
+            $table->string('PhoneNu');
         });
     }
 

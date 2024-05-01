@@ -8,10 +8,14 @@ use App\Http\Controllers\ListingController;
 //Get All Listings
 Route::get ('/',[ListingController::class,'index']);
 
+//Create Listing
+Route::get('/listings/create',[ListingController::class,'create']);
+
+//Store Listing
+Route::post('/listings',[ListingController::class,'store']);
+
 //Single listing
 Route::get ('/listings/{listing}',[ListingController::class,'show']);
-
-
 
 
 

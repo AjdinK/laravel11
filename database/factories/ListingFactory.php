@@ -18,7 +18,7 @@ class ListingFactory extends Factory
     {
         return [
             'title' => fake()->title(),
-            'tags' => 'API , PHP , LARAVEL , C#',
+            'tags' => 'api,laravel,php,c#,java,javascript',
             'company' => fake()->company(),
             'location' => fake()->city(),
             'email' => fake()->companyEmail(),
