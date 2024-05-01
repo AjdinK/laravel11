@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
-    'App\\Models\\Listing' => $baseDir . '/app/Models/Listing.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -129,7 +128,6 @@ return array(
     'Cron\\HoursField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
     'Cron\\MinutesField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
-    'Database\\Factories\\ListingFactory' => $baseDir . '/database/factories/ListingFactory.php',
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
     'DateError' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
@@ -2309,6 +2307,7 @@ return array(
     'Laravel\\Prompts\\Themes\\Contracts\\Scrolling' => $vendorDir . '/laravel/prompts/src/Themes/Contracts/Scrolling.php',
     'Laravel\\Prompts\\Themes\\Default\\Concerns\\DrawsBoxes' => $vendorDir . '/laravel/prompts/src/Themes/Default/Concerns/DrawsBoxes.php',
     'Laravel\\Prompts\\Themes\\Default\\Concerns\\DrawsScrollbars' => $vendorDir . '/laravel/prompts/src/Themes/Default/Concerns/DrawsScrollbars.php',
+    'Laravel\\Prompts\\Themes\\Default\\Concerns\\InteractsWithStrings' => $vendorDir . '/laravel/prompts/src/Themes/Default/Concerns/InteractsWithStrings.php',
     'Laravel\\Prompts\\Themes\\Default\\ConfirmPromptRenderer' => $vendorDir . '/laravel/prompts/src/Themes/Default/ConfirmPromptRenderer.php',
     'Laravel\\Prompts\\Themes\\Default\\MultiSearchPromptRenderer' => $vendorDir . '/laravel/prompts/src/Themes/Default/MultiSearchPromptRenderer.php',
     'Laravel\\Prompts\\Themes\\Default\\MultiSelectPromptRenderer' => $vendorDir . '/laravel/prompts/src/Themes/Default/MultiSelectPromptRenderer.php',

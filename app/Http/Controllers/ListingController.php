@@ -7,39 +7,39 @@ use Illuminate\Http\Request;
 
 class ListingController extends Controller
 {
-    //to show all listings
-    public function index() {
-
-        // dd(request('tag'));
-
-        return view('listings.index', [
-            'listings' => Listing::latest()
-            ->filter(request(['tag','search']))
-            ->get()
+    public function index () {
+        return view ('/listings.index',
+        [
+            'listings' => Listing::All(),
         ]);
     }
 
-    //to show single listing
-    public function show (int $id) {
+    public function show (Listing $listing) {
+        return view ('/listings.show' , [
+            'listing' => $listing,
+        ]);
+    }
 
+    public function show2 ($id){
         $data = Listing::find($id);
-
         if ($data){
-            return view ('listings.show',[
-                'listing' => $data
+            return view ('/listings.show',
+            [
+                'listing' => $data,
             ]);
         }
+    }
+
+    //to show single listing
+    public function show3 ($id) {
+        $data = Listing::find($id);
+        if ($data){
+            return view ('listing',[
+                'listing' => $data
+            ]);}
 
         else {
             abort('404');
         }
     }
-    public function create () {
-        return view('listings.create');
-    }
-
-    public function store (Request $request) {
-        // dd($request->all());
-    }
-
 }

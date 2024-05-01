@@ -1,16 +1,44 @@
-<!-- <?php
+<?php
 
-use App\Http\Controllers\ListingController;
+
+use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListingController;
 
-// All Listings
-Route::get('/', [ListingController::class,'index']);
+//Get All Listings
+Route::get ('/',[ListingController::class,'index']);
 
-// Show Create Form
-Route::get('/listings/create',[ListingController::class,'create']);
+//Single listing
+Route::get ('/listings/{listing}',[ListingController::class,'show']);
 
-// Store Listing Data
-Route::post('/listings',[ListingController::class,'store']);
 
-// Single listing
-Route::get('/listings/{id}',[ListingController::class,'show']);
+
+
+
+
+// Route::get ('listings/{listing}' , function (Listing $listing) {
+//     return view ('listing' ,
+//     [
+//         'listing' => $listing,
+//     ]);
+// });
+
+
+// Route::get ('listings/{id}', function ($id) {
+//     $data = Listing::find($id);
+//     if ($data){
+//         return view ('listing' ,
+//         [
+//             'listing' => $data,
+//         ]);
+//     }
+//     else
+//         abort (404);
+// });
+
+// Route::get ('listings/{id}', function ($id) {
+//     return view ('listing',
+//     [
+//         'listing' => Listing::find($id),
+//     ]);
+// });
