@@ -3,6 +3,7 @@
 
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ListingController;
 
 //Get All Listings
@@ -19,6 +20,22 @@ Route::get('/listings/{listing}/edit',[ListingController::class,'edit']);
 
 //Update Listing
 Route::put('/listings/{listing}',[ListingController::class,'update']);
+
+//Delete Listing
+Route::delete('/listings/{listing}',[ListingController::class,'destroy']);
+
+
+//Show Register From
+Route::get('/register/',[UserController::class,'create']);
+
+//Store new Users
+Route::post ('/users',[UserController::class,'store']);
+
+//Logout Users
+Route::post ('/logout',[UserController::class,'logout']);
+
+//Login Users
+Route::get ('/login',[UserController::class,'login']);
 
 //Single listing
 Route::get ('/listings/{listing}',[ListingController::class,'show']);

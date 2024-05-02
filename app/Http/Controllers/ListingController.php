@@ -71,6 +71,14 @@ class ListingController extends Controller
         return back()->with('message','Listing updated successfully');
     }
 
+    public function destroy(Listing $listing) {
+        $listing->delete();
+        return redirect('/')->with('message',"Listing deleted successfully");
+    }
+
+
+
+
 
     //to show single listing
     public function show (Listing $listing) {
