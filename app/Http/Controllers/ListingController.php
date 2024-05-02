@@ -1,6 +1,7 @@
 <?php
-
+namespace App\Models;
 namespace App\Http\Controllers;
+
 
 use App\Models\Listing;
 use Illuminate\Http\Request;
@@ -39,6 +40,8 @@ class ListingController extends Controller
             $formFileds['logo'] = $request->file('logo')->store('logos','public');
         }
 
+        $formFileds['user_id'] = auth()->user()->id;
+
         Listing::create($formFileds);
 
         return redirect('/')->with('message','Listing created successfully');
@@ -76,10 +79,6 @@ class ListingController extends Controller
         return redirect('/')->with('message',"Listing deleted successfully");
     }
 
-
-
-
-
     //to show single listing
     public function show (Listing $listing) {
         return view ('/listings.show' , [
@@ -87,31 +86,16 @@ class ListingController extends Controller
         ]);
     }
 
+    public function manage () {
+        return view ('listings.manage' ,
+        [
+            'listings' =>
+            auth()->
+            user()->
+            listings()->
+            get(),
+,
+        ]);
+    }
 
-
-
-
-    // public function show2 ($id){
-    //     $data = Listing::find($id);
-    //     if ($data){
-    //         return view ('/listings.show',
-    //         [
-    //             'listing' => $data,
-    //         ]);
-    //     }
-    // }
-
-
-     //to show single listing by id
-    // public function show3 ($id) {
-    //     $data = Listing::find($id);
-    //     if ($data){
-    //         return view ('listing',[
-    //             'listing' => $data
-    //         ]);}
-
-    //     else {
-    //         abort('404');
-    //     }
-    // }
 }
