@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('website');
             $table->longText('description');
             $table->string('phoneNumber')->nullable();
+            $table->string('logo')->nullable();
         });
     }
 
