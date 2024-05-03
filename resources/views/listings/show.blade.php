@@ -41,26 +41,23 @@
     </div>
     </x-card>
 
-    <x-card class='mt-4 flex space-x-6 p-2'>
+    {{-- TODO : to move from here or to show only if the user is owner --}}
+    {{-- <x-card class='mt-4 flex space-x-6 p-2'>
 
-        <a href='/listings/{{ $listing->id }}/edit'>
-            <i class='fa-solid fa-pencil'></i> Edit
-        </a>
+            <a href='/listings/{{ $listing->id }}/edit'>
+                <i class='fa-solid fa-pencil'></i> Edit
+            </a>
 
-        <form method="POST" action='/listings/{{ $listing->id }}'>
-            @csrf
-            @method('delete')
-            <button class="text-red-500">
-                <i class="fa-solid fa-trash"></i>
-                Delete
-            </button>
-        </form>
+            <form method="POST" action='/listings/{{ $listing->id }}'>
+                @csrf
+                @method('delete')
+                <button class="text-red-500">
+                    <i class="fa-solid fa-trash"></i>
+                    Delete
+                </button>
+            </form>
 
-    </x-card>
-
-
-
-
+        </x-card> --}}
 
 
     </div>
