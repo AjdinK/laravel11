@@ -1,18 +1,18 @@
 <!-- Hero -->
-<section class="relative h-72 bg-laravel flex flex-col justify-center align-center text-center space-y-4 mb-4">
-    <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-no-repeat bg-center"
+<section class="bg-laravel align-center relative mb-4 flex h-72 flex-col justify-center space-y-4 text-center">
+    <div class="absolute left-0 top-0 h-full w-full bg-center bg-no-repeat opacity-10"
         style="background-image: url('images/laravel-logo.png')"></div>
 
     <div class="z-10">
         <h1 class="text-6xl font-bold uppercase text-white">
             Lara<span class="text-black">Gigs</span>
         </h1>
-        <p class="text-2xl text-gray-200 font-bold my-4">
+        <p class="my-4 text-2xl font-bold text-gray-200">
             Find or post Laravel jobs & projects
         </p>
         <div>
-            <a href="register.html"
-                class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black">Sign
+            <a class="mt-2 inline-block rounded-xl border-2 border-white px-4 py-2 uppercase text-white hover:border-black hover:text-black"
+                href="register.html">Sign
                 Up to List a Gig</a>
         </div>
     </div>

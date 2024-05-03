@@ -11,8 +11,9 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    public function listings () {
-        return $this->hasMany (Listing::class,'user_id');
+    public function listings()
+    {
+        return $this->hasMany(Listing::class, 'user_id');
     }
 
     /**
@@ -49,5 +50,4 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
 }

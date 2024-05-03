@@ -6,7 +6,7 @@ $tags = explode(',', $tagsCsv);
 
 <ul class="flex">
     @foreach ($tags as $tag)
-        <li class="bg-black text-white rounded-xl px-3 py-1 mr-2">
+        <li class="mr-2 rounded-xl bg-black px-3 py-1 text-white">
             <a href="/?tags={{ $tag }}">{{ $tag }}</a>
         </li>
     @endforeach

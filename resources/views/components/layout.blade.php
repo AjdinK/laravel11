@@ -5,11 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    <link href="images/favicon.ico" rel="icon" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
     <script>
         tailwind.config = {
             theme: {
@@ -25,9 +26,9 @@
 </head>
 
 <body class="mb-48">
-    <nav class="flex justify-between items-center mb-4">
-        <a href="/"><img class="w-24" src="{{ asset('images/logo.png') }}" alt="" class="logo" /></a>
-        <ul class="flex space-x-6 mr-6 text-lg">
+    <nav class="mb-4 flex items-center justify-between">
+        <a href="/"><img class="w-24" class="logo" src="{{ asset('images/logo.png') }}" alt="" /></a>
+        <ul class="mr-6 flex space-x-6 text-lg">
             @auth
 
                 <li>
@@ -37,7 +38,7 @@
                 </li>
 
                 <li>
-                    <a href="/listings/manage" class="hover:text-laravel">
+                    <a class="hover:text-laravel" href="/listings/manage">
                         <i class="fa-solid fa-gear"></i>
                         Manage Listings
                     </a>
@@ -55,10 +56,10 @@
                 </li>
             @else
                 <li>
-                    <a href="/register" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i> Register</a>
+                    <a class="hover:text-laravel" href="/register"><i class="fa-solid fa-user-plus"></i> Register</a>
                 </li>
                 <li>
-                    <a href="/login" class="hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <a class="hover:text-laravel" href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i>
                         Login</a>
                 </li>
             @endauth
@@ -68,10 +69,10 @@
         {{ $slot }}
     </main>
     <footer
-        class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center">
+        class="bg-laravel fixed bottom-0 left-0 mt-24 flex h-24 w-full items-center justify-start font-bold text-white opacity-90 md:justify-center">
         <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
 
-        <a href="/listings/create" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Post Job</a>
+        <a class="absolute right-10 top-1/3 bg-black px-5 py-2 text-white" href="/listings/create">Post Job</a>
     </footer>
 </body>
 

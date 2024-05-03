@@ -1,7 +1,7 @@
 <x-layout>
-    <x-card class='p-10 rounded max-w-lg mx-auto mt-24'>
+    <x-card class='mx-auto mt-24 max-w-lg rounded p-10'>
         <header class="text-center">
-            <h2 class="text-2xl font-bold uppercase mb-1">
+            <h2 class="mb-1 text-2xl font-bold uppercase">
                 Register
             </h2>
             <p class="mb-4">Create an account to post gigs</p>
@@ -10,14 +10,14 @@
         <form method="POST" action="/users">
             @csrf
             <div class="mb-6">
-                <label for="name" class="inline-block text-lg mb-2">
+                <label class="mb-2 inline-block text-lg" for="name">
                     Name
                 </label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="name"
+                <input class="w-full rounded border border-gray-200 p-2" name="name" type="text"
                     value="{{ old('name') }}" />
 
                 @error('name')
-                    <p class="text-red-500 mt-1 text-xs">
+                    <p class="mt-1 text-xs text-red-500">
                         {{ $message }}
                     </p>
                 @enderror
@@ -25,12 +25,12 @@
             </div>
 
             <div class="mb-6">
-                <label for="email" class="inline-block text-lg mb-2">Email</label>
-                <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email"
+                <label class="mb-2 inline-block text-lg" for="email">Email</label>
+                <input class="w-full rounded border border-gray-200 p-2" name="email" type="email"
                     value="{{ old('email') }}" />
 
                 @error('email')
-                    <p class="text-red-500 mt-1 text-xs">
+                    <p class="mt-1 text-xs text-red-500">
                         {{ $message }}
                     </p>
                 @enderror
@@ -38,14 +38,14 @@
             </div>
 
             <div class="mb-6">
-                <label for="password" class="inline-block text-lg mb-2">
+                <label class="mb-2 inline-block text-lg" for="password">
                     Password
                 </label>
-                <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password"
+                <input class="w-full rounded border border-gray-200 p-2" name="password" type="password"
                     value="{{ old('password') }}" />
 
                 @error('password')
-                    <p class="text-red-500 mt-1 text-xs">
+                    <p class="mt-1 text-xs text-red-500">
                         {{ $message }}
                     </p>
                 @enderror
@@ -53,14 +53,14 @@
             </div>
 
             <div class="mb-6">
-                <label for="password2" class="inline-block text-lg mb-2">
+                <label class="mb-2 inline-block text-lg" for="password2">
                     Confirm Password
                 </label>
-                <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password_confirmation"
+                <input class="w-full rounded border border-gray-200 p-2" name="password_confirmation" type="password"
                     vvalue="{{ old('password_confirmation') }}" />
 
                 @error('password_confirmation')
-                    <p class="text-red-500 mt-1 text-xs">
+                    <p class="mt-1 text-xs text-red-500">
                         {{ $message }}
                     </p>
                 @enderror
@@ -68,7 +68,7 @@
             </div>
 
             <div class="mb-6">
-                <button type="submit" class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
+                <button class="bg-laravel rounded px-4 py-2 text-white hover:bg-black" type="submit">
                     Sign Up
                 </button>
             </div>
@@ -76,7 +76,7 @@
             <div class="mt-8">
                 <p>
                     Already have an account?
-                    <a href="/login" class="text-laravel">Login</a>
+                    <a class="text-laravel" href="/login">Login</a>
                 </p>
             </div>
         </form>

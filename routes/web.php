@@ -10,53 +10,53 @@ use Illuminate\Routing\Controllers\Middleware;
 
 
 //Get All Listings
-Route::get ('/',[ListingController::class,'index']);
+Route::get('/', [ListingController::class, 'index']);
 
 //Create Listing
-Route::get('/listings/create',[ListingController::class,'create'])
-->middleware('auth');
+Route::get('/listings/create', [ListingController::class, 'create'])
+    ->middleware('auth');
 
 //Store Listing
-Route::post('/listings',[ListingController::class,'store'])
-->middleware('auth');
+Route::post('/listings', [ListingController::class, 'store'])
+    ->middleware('auth');
 
 //Edit Listing
-Route::get('/listings/{listing}/edit',[ListingController::class,'edit'])
-->middleware('auth');
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])
+    ->middleware('auth');
 
 //Update Listing
-Route::put('/listings/{listing}',[ListingController::class,'update'])
-->middleware('auth');
+Route::put('/listings/{listing}', [ListingController::class, 'update'])
+    ->middleware('auth');
 
 //Delete Listing
-Route::delete('/listings/{listing}',[ListingController::class,'destroy'])
-->middleware('auth');
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])
+    ->middleware('auth');
 
 //Manage
-Route::get('/listings/manage',[ListingController::class,'manage'])
-->middleware('auth');
+Route::get('/listings/manage', [ListingController::class, 'manage'])
+    ->middleware('auth');
 
 //Show Register From
-Route::get('/register/',[UserController::class,'create'])
-->middleware('guest');
+Route::get('/register/', [UserController::class, 'create'])
+    ->middleware('guest');
 
 //Store new Users
-Route::post ('/users',[UserController::class,'store']);
+Route::post('/users', [UserController::class, 'store']);
 
 //Logout Users
-Route::post ('/logout',[UserController::class,'logout']);
+Route::post('/logout', [UserController::class, 'logout']);
 
 //Show Login Form Users
-Route::get ('/login',[UserController::class,'login'])
-->name('login')
-->middleware('guest');
+Route::get('/login', [UserController::class, 'login'])
+    ->name('login')
+    ->middleware('guest');
 
 //Login Users
-Route::post ('/users/authenticate',[UserController::class,'authenticate']);
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 
 //Single listing
-Route::get ('/listings/{listing}',[ListingController::class,'show']);
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 
 
