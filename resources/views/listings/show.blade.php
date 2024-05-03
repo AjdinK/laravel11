@@ -41,6 +41,7 @@
     </div>
     </x-card>
 
+
     {{-- TODO : to move from here or to show only if the user is owner --}}
     {{-- <x-card class='mt-4 flex space-x-6 p-2'>
 
