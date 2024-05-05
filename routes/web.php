@@ -12,6 +12,7 @@ use Illuminate\Routing\Controllers\Middleware;
 //Get All Listings
 Route::get('/', [ListingController::class, 'index']);
 
+
 //Create Listing
 Route::get('/listings/create', [ListingController::class, 'create'])
     ->middleware('auth');

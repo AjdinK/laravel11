@@ -12,7 +12,7 @@
         </p>
         <div>
             <a class="mt-2 inline-block rounded-xl border-2 border-white px-4 py-2 uppercase text-white hover:border-black hover:text-black"
-                href="register.html">Sign
+                href="/register">Sign
                 Up to List a Gig</a>
         </div>
     </div>
